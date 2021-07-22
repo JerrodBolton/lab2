@@ -1,11 +1,11 @@
 // I want the ues to input their name and they will get a welcome form th website.
-
+/*
 function innames(){
 let usernames = prompt("What is your name?");
  document.write(" Hey, welcome " + usernames + " happy for here you here!");
+}*/
+  "use strict";
 
-}
- "use strict";
 function quiz() {
   // if the x don't put Jerrod Bolton then it's going to put you wrong.
 
@@ -53,20 +53,22 @@ function quiz() {
   while (college){
     let response5 = prompt(" Was college easy for me?");
     if (response5 === "no") {
-      graduate = false;
+      college = false;
       alert("Your Correct!!!!");
-
-    } else {
+  
+        }   
+         else{
       alert("Your answer is incorrect");
     }
-  }
+   } 
+  
 
   let golds = true;
 
   while (golds) {
     let response4 = prompt("Is my gold to be a software engineer?");
     if (response4 === "yes") {
-      graduate = false;
+       golds = false;
       alert("Your Correct!!!!");
     }
      else {
@@ -74,3 +76,38 @@ function quiz() {
     }
   }
 }
+
+ 
+let magicnumber = "15";
+
+alert (" You four chances to guess the correct number. 1-20");
+
+  for(let x = 0 ; x < 4; x++){
+
+    let guess = prompt("What is the magic number 1-20?");
+
+    // guess is greatest the magicnumber
+
+     if(guess > magicnumber ){
+        
+      alert("Your to high");
+      
+    }
+     
+    // guess is to low than magicnumber 
+
+    if( guess < magicnumber){
+      alert("Your to low");
+    }
+
+    // guess is so close
+    if (guess === "14" ){
+      alert("So close but wrong to low!!!");
+    }
+    if(guess === magicnumber){
+      alert( "You got it");
+    
+      break;
+    }
+  }
+  alert ("The correct answer is 15");
